@@ -1,4 +1,4 @@
-#!/usr/local/bin/Python
+#!/opt/homebrew/bin/python3.9
 
 from __future__ import print_function
 from mailmerge import MailMerge
