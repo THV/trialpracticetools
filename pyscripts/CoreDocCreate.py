@@ -1,19 +1,19 @@
-#!/usr/local/bin/Python3.8
+#!/usr/local/bin/Python
 
 from __future__ import print_function
 from mailmerge import MailMerge
 from datetime import date
 
 import sys
-import os
+import os # needed for making the output directory
 import codecs
 UTF8Writer = codecs.getwriter('utf8')
 
 #Get Case Information
-our_case = 'Keller v. Steep Hill'
-court_name = 'San Francisco Superior Court'
-case_no = '21175.00005 / Jmîchaeĺe Keller shareholder litigation'
-court_file_no = 'GCC-123'
+our_case = input("Enter our case name: ")
+case_no = input("Enter our case/matter Number: ")
+court_name = input("Enter the court or other tribunal: ")
+court_file_no = input("Enter the court file number: ")
 
 #Create Template Folder and Output Folder
 template_folder = "/Users/tvidal/Dropbox/Templates/"
