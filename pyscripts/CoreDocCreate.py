@@ -8,10 +8,14 @@ import sys
 import codecs
 UTF8Writer = codecs.getwriter('utf8')
 
+#Create Template Folder and Output Folder
+template_folder = "/Users/tvidal/Dropbox/Templates/99.Core Docs/"
+output_folder = "/Users/tvidal/Desktop/"
+
 #Associate the Core Document Templates
-coredoc01_tmpl = "/Users/tvidal/Documents/Templates/99.Core Docs/CoreDoc01_finder_template.docx"
-coredoc02_tmpl = "/Users/tvidal/Documents/Templates/99.Core Docs/CoreDoc02_litplan_template.docx"
-coredoc10_tmpl = "/Users/tvidal/Documents/Templates/99.Core Docs/CoreDoc10_case_questions_template.docx"
+coredoc01_tmpl = template_folder + "CoreDoc01_finder_template.docx"
+coredoc02_tmpl = template_folder + "CoreDoc02_litplan_template.docx"
+coredoc10_tmpl = template_folder + "CoreDoc10_case_questions_template.docx"
 
 #Assign the templates to the core merge documents
 coredoc01 = MailMerge(coredoc01_tmpl)
@@ -32,6 +36,6 @@ coredoc02.merge(**kwargs)
 coredoc10.merge(**kwargs)
 
 #Write the documents
-coredoc01.write('/Users/tvidal/Desktop/Completed Templates/Core Doc 01 - Info Sheet.docx')
-coredoc02.write('/Users/tvidal/Desktop/Completed Templates/Core Doc 02 - Litigation Plan.docx')
-coredoc10.write('/Users/tvidal/Desktop/Completed Templates/Core Doc 10 - Questions & Probs.docx')
+coredoc01.write(output_folder + 'Core Doc 01 - Info Sheet.docx')
+coredoc02.write(output_folder + 'Core Doc 02 - Litigation Plan.docx')
+coredoc10.write(output_folder + 'Core Doc 10 - Questions & Probs.docx')
